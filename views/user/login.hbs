@@ -2,7 +2,7 @@
   <div class="container p-5 col-6">
   <form action="/login" method="POST">
     <h2 class="text-center">SignIn</h2>
-
+  
     
     <div class="form-group ">
       <label for="exampleInputEmail1">Email address</label>
@@ -14,6 +14,9 @@
       <label for="exampleInputPassword1">Password</label>
       <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
     </div>
+      {{#if loginErr}}
+    <p class="error">{{loginErr}}</p>
+    {{/if}}
  
       <a href="/signup"> Create new account?</a>
     
